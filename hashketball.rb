@@ -173,4 +173,17 @@ def team_names
   array
 end
 
-def player_numbers
+def player_numbers(team_name)
+  jersey_array = []
+  
+  game_hash.each do |location, team_attributes|
+    if team_attributes[:team_name] == team_name
+      team_attributes[:players].each do |player_attribute, value|
+        jersey_array.push(player_attribute[:number])
+      end
+    end
+  end
+  jersey_array
+end
+  
+  
