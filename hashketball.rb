@@ -132,6 +132,7 @@ def num_points_scored(player_name)
     team_attributes[:players].each do |player_attribute, value|
       if player_attribute[:player_name] == player_name 
         player_attribute[:points]
+        binding.pry
       end
     end
   end
