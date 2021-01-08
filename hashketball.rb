@@ -128,12 +128,15 @@ def game_hash
 end
 
 def num_points_scored(player_name)
+  points_scored = 0
+  
   game_hash.each do |location, team_attributes|
     team_attributes[:players].each do |player_attribute, value|
       if player_attribute[:player_name] == player_name 
-        puts player_attribute[:points]
+         points_scored = player_attribute[:points]
       end
     end
   end
+  points_scored
 end
       
