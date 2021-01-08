@@ -172,3 +172,5 @@ def team_names
   end
   array
 end
+
+def player_numbers
