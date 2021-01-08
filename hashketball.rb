@@ -186,5 +186,12 @@ def player_numbers(team_name)
   jersey_array
 end
   
-
+def player_stats(player_name)
+  stat_hash = {}
+  
+  game_hash.each do |location, team_attributes|
+    team_attributes[:players].each do |player_attribute, value|
+      if player_attribute[:player_name] == player_name
+        stat_hash = player_attribute
+        delete
   
