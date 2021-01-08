@@ -193,5 +193,5 @@ def player_stats(player_name)
     team_attributes[:players].each do |player_attribute, value|
       if player_attribute[:player_name] == player_name
         stat_hash = player_attribute
-        delete
+        stat_hash.delete(player_name)
   
